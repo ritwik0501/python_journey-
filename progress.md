@@ -91,9 +91,9 @@ Two carry disproportionate weight for beginners. `//` is floor division (returns
 Also learn **operator precedence** (`**` before `*` before `+`, comparisons before `and`/`or`) and **short-circuit evaluation**: in `a and b`, if `a` is falsy, `b` is never evaluated. That's not trivia — it's the standard idiom for guarding against errors, as in `if user is not None and user.is_active`.
 
 ### Drills
-- [ ] Use `%` to determine if a number is even, and `//` plus `%` to split 3725 seconds into hours, minutes, seconds.
-- [ ] Predict the output of `2 + 3 * 4 ** 2 // 5`, then verify.
-- [ ] Write an expression that is `True` only when a number is between 10 and 20 inclusive.
+- [Done] Use `%` to determine if a number is even, and `//` plus `%` to split 3725 seconds into hours, minutes, seconds.
+- [Done] Predict the output of `2 + 3 * 4 ** 2 // 5`, then verify.
+- [Done] Write an expression that is `True` only when a number is between 10 and 20 inclusive.
 
 ### Exercises
 - [ ] **Change maker:** given an amount in cents, print how many quarters, dimes, nickels, and pennies make it up, using only `//` and `%`.
