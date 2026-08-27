@@ -26,9 +26,29 @@
 # ans 11-- to understand learn operator precedency 
 
 
-num=int(input())
+# num=int(input())
 
-if(num>=10 and num<=20):
-    print("True")
-else:
-    print("False")
+# if(num>=10 and num<=20):
+#     print("True")
+# else:
+#     print("False")
+
+
+### Exercises
+# - [ ] **Change maker:** given 
+# an amount in cents, print how many quarters, dimes, nickels, and pennies make it up, using only `//` and `%`.
+
+cents= int(input())
+
+quarters= cents//25
+remaining_quarter=cents%25
+
+dimes= remaining_quarter//10
+remaining_dimes=remaining_quarter%10
+
+nickels= remaining_dimes//5
+pennies= remaining_dimes%5
+
+print(f"Quartes of {cents} cents is {quarters}")
+print(f"dimes of {cents} cents is {dimes}")
+print(f"nickels of {cents} cents is {nickels}")
