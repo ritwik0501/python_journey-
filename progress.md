@@ -96,11 +96,11 @@ Also learn **operator precedence** (`**` before `*` before `+`, comparisons befo
 - [Done] Write an expression that is `True` only when a number is between 10 and 20 inclusive.
 
 ### Exercises
-- [ ] **Change maker:** given an amount in cents, print how many quarters, dimes, nickels, and pennies make it up, using only `//` and `%`.
-- [ ] **Leap year checker:** implement the real rule (divisible by 4, except centuries, unless divisible by 400) as a single boolean expression.
+- [Done] **Change maker:** given an amount in cents, print how many quarters, dimes, nickels, and pennies make it up, using only `//` and `%`.
+- [Done] **Leap year checker:** implement the real rule (divisible by 4, except centuries, unless divisible by 400) as a single boolean expression.
 
 ### Mini-project
-- [ ] **Simple Calculator (80–120 lines):** menu-driven, supports the six arithmetic operators, keeps a running "last result" the user can reuse, and refuses to divide by zero. No functions yet — that's deliberate, so you'll *feel* why you need them in 1.6.
+- [Done] **Simple Calculator (80–120 lines):** menu-driven, supports the six arithmetic operators, keeps a running "last result" the user can reuse, and refuses to divide by zero. No functions yet — that's deliberate, so you'll *feel* why you need them in 1.6.
 
 ### Resources
 - [Python Docs — Expressions](https://docs.python.org/3/reference/expressions.html)
