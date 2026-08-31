@@ -126,7 +126,7 @@ You need fluency in three areas:
 - [Done] Format the number `1234.5678` as `$1,234.57` using an f-string.
 
 ### Exercises
-- [ ] **Palindrome checker:** ignore case, spaces, and punctuation. Test with "A man, a plan, a canal: Panama".
+- [Done] **Palindrome checker:** ignore case, spaces, and punctuation. Test with "A man, a plan, a canal: Panama".
 - [ ] **Word statistics:** given a paragraph, report word count, character count (with and without spaces), average word length, and longest word.
 - [ ] **Caesar cipher:** shift each letter by N positions, wrapping Z→A, preserving case and leaving non-letters alone. (`ord()` and `chr()` are your tools.)
 

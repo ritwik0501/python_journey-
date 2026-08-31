@@ -1,4 +1,4 @@
-s=" ritwik ghosh "
+# s=" ritwik ghosh "
 # print(s.strip())
 # print(s.upper())
 # print(s.lower())
@@ -31,6 +31,42 @@ s=" ritwik ghosh "
 # ,   → add thousands separators
 # .2  → keep 2 decimal places
 # f   → format as a floating-point number
-s='1234.5678'
-print(f"${float(s):,.2f}")
+# s='1234.5678'
+# print(f"${float(s):,.2f}")
+
+
+### Exercises
+# - [ ] **Palindrome checker:** ignore case, 
+# spaces, and punctuation. Test with "A man, a plan, a canal: Panama".
+
+# print("Enter a sentecne to check wheather it is palindrom or not")
+# str1=str(input())
+
+# clean_str1=''
+# for c in str1:
+#     if c.isalnum():
+#         clean_str1+=clean_str1
+
+
+# if clean_str1==clean_str1[::-1]:
+#     print("Palindrom")
+# else:
+#     print("Not palindrom")
+
+
+#  **Word statistics:** given a paragraph, 
+# report word count, character count (with and without spaces), average word length, and longest word.
+
+print('Enter a para ')
+para=str(input())
+
+word_count=len(para.split(" "))
+count=0
+count_with_spaces=0
+for char in para:
+    if char != " ":
+         count += 1
+         count_with_spaces+=1
+    else:
+         count_with_spaces+=1
 
