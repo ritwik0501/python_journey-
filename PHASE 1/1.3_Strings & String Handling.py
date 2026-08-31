@@ -10,7 +10,7 @@ s=" ritwik ghosh "
 
 #Drills 
 #- [ ] Reverse a string three ways: slicing, a loop, and `"".join(reversed(s))`.
-s="ritwik ghosh"
+# s="ritwik ghosh"
 # [::-1] means [start : stop : step]
 #sol 1: print(s[::-1])
 
@@ -19,3 +19,7 @@ s="ritwik ghosh"
 
 # sol 3: 
 # print("".join(reversed(s)))    
+
+#  [ ] Given `"  Hello, World!  "`, chain methods to produce `"hello world"`.
+# s="  Hello, World!  "
+# print(((s.strip()).lower()).removesuffix("!").replace(",",""))

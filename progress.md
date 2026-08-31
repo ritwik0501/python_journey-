@@ -121,7 +121,7 @@ You need fluency in three areas:
 3. **f-strings:** `f"{name} scored {score:.2f}"`. Learn the format mini-language for alignment (`:>10`), padding (`:05d`), and precision (`:.2f`). It makes your terminal output look intentional rather than accidental.
 
 ### Drills
-- [ ] Reverse a string three ways: slicing, a loop, and `"".join(reversed(s))`.
+- [Done] Reverse a string three ways: slicing, a loop, and `"".join(reversed(s))`.
 - [ ] Given `"  Hello, World!  "`, chain methods to produce `"hello world"`.
 - [ ] Format the number `1234.5678` as `$1,234.57` using an f-string.
 
