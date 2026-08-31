@@ -122,8 +122,8 @@ You need fluency in three areas:
 
 ### Drills
 - [Done] Reverse a string three ways: slicing, a loop, and `"".join(reversed(s))`.
-- [ ] Given `"  Hello, World!  "`, chain methods to produce `"hello world"`.
-- [ ] Format the number `1234.5678` as `$1,234.57` using an f-string.
+- [Done] Given `"  Hello, World!  "`, chain methods to produce `"hello world"`.
+- [Done] Format the number `1234.5678` as `$1,234.57` using an f-string.
 
 ### Exercises
 - [ ] **Palindrome checker:** ignore case, spaces, and punctuation. Test with "A man, a plan, a canal: Panama".
