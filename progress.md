@@ -127,7 +127,7 @@ You need fluency in three areas:
 
 ### Exercises
 - [Done] **Palindrome checker:** ignore case, spaces, and punctuation. Test with "A man, a plan, a canal: Panama".
-- [ ] **Word statistics:** given a paragraph, report word count, character count (with and without spaces), average word length, and longest word.
+- [Done] **Word statistics:** given a paragraph, report word count, character count (with and without spaces), average word length, and longest word.
 - [ ] **Caesar cipher:** shift each letter by N positions, wrapping Z→A, preserving case and leaving non-letters alone. (`ord()` and `chr()` are your tools.)
 
 ### Mini-project

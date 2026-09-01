@@ -57,16 +57,47 @@
 #  **Word statistics:** given a paragraph, 
 # report word count, character count (with and without spaces), average word length, and longest word.
 
-print('Enter a para ')
-para=str(input())
+# print('Enter a para ')
+# para=str(input())
 
-word_count=len(para.split(" "))
-count=0
-count_with_spaces=0
-for char in para:
-    if char != " ":
-         count += 1
-         count_with_spaces+=1
-    else:
-         count_with_spaces+=1
+# word_count=len(para.split(" "))
+# count=0
+# count_with_spaces=len(para)
+# longest_word=""
+# check_longest_word=(para.split())
+# for str in check_longest_word:
+#     if len(str)>len(longest_word):
+#         longest_word=str
+# print(longest_word)
 
+# for char in para:
+#     if char != " ":
+#          count += 1
+         
+         
+
+# average_word_lenth= count/len((para.split()))
+# print(average_word_lenth)
+
+
+#[ ] **Caesar cipher:** shift each letter by N positions, wrapping Z→A, 
+# preserving case and leaving non-letters alone. (`ord()` and `chr()` are your tools.)
+
+
+print("Enter a text/string")
+text=str(input())
+print("Enter how much position you want to shift")
+position=int(input())
+
+result=""
+
+for char in text:
+    
+    if "A"<=char<="Z":
+        number=ord(char) - ord("A")
+        number=(number+position)%26
+        new_char=char(position+ord(char))
+        result +=   new_char
+        
+        
+    
