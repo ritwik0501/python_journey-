@@ -84,29 +84,66 @@
 # preserving case and leaving non-letters alone. (`ord()` and `chr()` are your tools.)
 
 
-print("Enter a text/string")
-text=str(input())
-print("Enter how much position you want to shift")
-position=int(input())
+# print("Enter a text/string")
+# text=str(input())
+# print("Enter how much position you want to shift")
+# position=int(input())
 
-result=""
+# result=""
 
-for char in text:
+# for char in text:
     
-    if "A"<=char<="Z":
-        number=ord(char) - ord("A")
-        number=(number+position)%26
-        new_char=chr(number+ord("A"))
-        result +=   new_char
+#     if "A"<=char<="Z":
+#         number=ord(char) - ord("A")
+#         number=(number+position)%26
+#         new_char=chr(number+ord("A"))
+#         result +=   new_char
 
-    elif "a" <= char <= "z":
-        number=ord(char)-ord("a")
-        number=(number+position)%26
-        new_char=chr(number + (ord("a")))
-        result+=new_char
-    else:
-        result+=char
+#     elif "a" <= char <= "z":
+#         number=ord(char)-ord("a")
+#         number=(number+position)%26
+#         new_char=chr(number + (ord("a")))
+#         result+=new_char
+#     else:
+#         result+=char
 
-print(result)
+# print(result)
         
+### Mini-project
+# - [ ] **Text Analyzer / Password Strength Checker (150–200 lines):** 
+# the user pastes text; you report readability stats, most-repeated words, and vowel/consonant ratio. 
+# Second mode checks a password against length, mixed case, digit, and 
+# symbol rules, then prints a rated verdict with specific improvement suggestions.
+ 
+while(entry==3):
+    print("1.Text Analyzer")
+    print("2.Password Strength Checker")
+    print("3.Exit")
+    entry=int(input())
+    match entry:
+        case 1:
+            print("Enter a text to analyze")
+            text=str(input())
+            print("starting readbility..")
+            len_text=len(text)
+            char_count=0
+            special_char=0
+            for char in text:
+               if "A" <= char <= "Z" or "a" <= char <="z":
+                    char_count += 1
+               elif char!=" ": 
+                   special_char += 1
+
+               vowel_count=0
+               consonant_count=0  
+               for char in text:
+                    if char in "aeiouAEIOU":
+                        vowel_count += 1
+                    elif char!=" ":
+                        consonant_count +=1
+
+
+
+
     
+

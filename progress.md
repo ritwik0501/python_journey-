@@ -128,7 +128,7 @@ You need fluency in three areas:
 ### Exercises
 - [Done] **Palindrome checker:** ignore case, spaces, and punctuation. Test with "A man, a plan, a canal: Panama".
 - [Done] **Word statistics:** given a paragraph, report word count, character count (with and without spaces), average word length, and longest word.
-- [ ] **Caesar cipher:** shift each letter by N positions, wrapping Z→A, preserving case and leaving non-letters alone. (`ord()` and `chr()` are your tools.)
+- [Done] **Caesar cipher:** shift each letter by N positions, wrapping Z→A, preserving case and leaving non-letters alone. (`ord()` and `chr()` are your tools.)
 
 ### Mini-project
 - [ ] **Text Analyzer / Password Strength Checker (150–200 lines):** the user pastes text; you report readability stats, most-repeated words, and vowel/consonant ratio. Second mode checks a password against length, mixed case, digit, and symbol rules, then prints a rated verdict with specific improvement suggestions.
