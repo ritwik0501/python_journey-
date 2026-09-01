@@ -96,8 +96,17 @@ for char in text:
     if "A"<=char<="Z":
         number=ord(char) - ord("A")
         number=(number+position)%26
-        new_char=char(position+ord(char))
+        new_char=chr(number+ord("A"))
         result +=   new_char
-        
+
+    elif "a" <= char <= "z":
+        number=ord(char)-ord("a")
+        number=(number+position)%26
+        new_char=chr(number + (ord("a")))
+        result+=new_char
+    else:
+        result+=char
+
+print(result)
         
     
