@@ -114,8 +114,11 @@
 # the user pastes text; you report readability stats, most-repeated words, and vowel/consonant ratio. 
 # Second mode checks a password against length, mixed case, digit, and 
 # symbol rules, then prints a rated verdict with specific improvement suggestions.
+#if password have combination of capital letter and small letter and special character and also number then it is a strong password 
+# otherwise not  
+entry=0
  
-while(entry==3):
+while(entry!=3):
     print("1.Text Analyzer")
     print("2.Password Strength Checker")
     print("3.Exit")
@@ -134,13 +137,57 @@ while(entry==3):
                elif char!=" ": 
                    special_char += 1
 
-               vowel_count=0
-               consonant_count=0  
-               for char in text:
-                    if char in "aeiouAEIOU":
-                        vowel_count += 1
-                    elif char!=" ":
-                        consonant_count +=1
+            vowel_count=0
+            consonant_count=0  
+            for char in text:
+                if char in "aeiouAEIOU":
+                    vowel_count += 1
+                elif char!=" ":
+                    consonant_count +=1
+
+                if vowel_count > 0:
+                    ratio_of_vowel_consonant = consonant_count / vowel_count
+                else:
+                    ratio_of_vowel_consonant = 0
+
+            print(f"Total characters : {len_text}")
+            print(f"Letters          : {char_count}")
+            print(f"Special chars    : {special_char}")
+            print(f"Vowels           : {vowel_count}")
+            print(f"Consonants       : {consonant_count}")
+            print(f"Consonant/Vowel ratio: {ratio_of_vowel_consonant:.2f}")
+
+        case 2:
+            print("Enter a password to check its strength")
+            password=str(input())
+            capital,small,special_character,number,length8=0,0,0,0,0
+            length_check=len(password)
+            if length_check >=8:
+                length8=1
+            for pas in password:
+                if "a"<=pas<= "z":
+                    small=1
+                elif "A"<=pas<= "Z":
+                    capital=1
+                elif pas.isdigit():
+                    number=1
+                 
+                else :
+                    special_character=1
+
+            values=[capital,small,special_character,number,length8]
+
+            zero_count = values.count(0)
+            result = 5 - zero_count
+
+            print(f"Your password is rated {result} out of 5")
+
+        case 3:
+            print("Ending....")
+            exit()
+   
+                    
+
 
 
 
