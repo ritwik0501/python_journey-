@@ -25,14 +25,38 @@
 
 # task 1 Build a progress bar that prints on one line using `end="\r"`.
 
-import time 
+# import time 
 
-for i in range(101):
-    bar= "#" * (i//5)
-    spaces=" "*(20-len(bar))
+# for i in range(101):
+#     bar= "#" * (i//5)
+#     spaces=" "*(20-len(bar))
     
-    print(f"Downloading...[{bar}{spaces}]",end="\r")
-    # time.sleep(0.1)
+#     print(f"Downloading...[{bar}{spaces}]",end="\r")
+#     # time.sleep(0.1)
     
-print("Successfully Download!`              ")
+# print("Successfully Download!`              ")
+
+# - Task 2 Print a formatted table of 5 products and prices, with columns aligned using f-string padding.
+# you have to put proper and normal value to look the table good 
+print("Enter 5 product name ")
+products=[]
+for i in range(5):
+    products.append(str(input()))
+
+price=[]
+for j in range(5):
+    print(f"Enter the price of product {products[j]}")
+    price.append(str(input()))
+    
+# Table header
+print("+----------------------+------------+")
+print(f"| {'Product':<20} | {'Price':>10} |")
+print("+----------------------+------------+")
+
+# Table rows
+for j in range(5):
+    print(f"| {products[j]:<20} | {price[j]:>10} |")
+
+print("+----------------------+------------+")
+
     
