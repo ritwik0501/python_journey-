@@ -131,7 +131,7 @@ You need fluency in three areas:
 - [Done] **Caesar cipher:** shift each letter by N positions, wrapping Z→A, preserving case and leaving non-letters alone. (`ord()` and `chr()` are your tools.)
 
 ### Mini-project
-- [ ] **Text Analyzer / Password Strength Checker (150–200 lines):** the user pastes text; you report readability stats, most-repeated words, and vowel/consonant ratio. Second mode checks a password against length, mixed case, digit, and symbol rules, then prints a rated verdict with specific improvement suggestions.
+- [Done] **Text Analyzer / Password Strength Checker (150–200 lines):** the user pastes text; you report readability stats, most-repeated words, and vowel/consonant ratio. Second mode checks a password against length, mixed case, digit, and symbol rules, then prints a rated verdict with specific improvement suggestions.
 
 ### Resources
 - [Python Docs — String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)
