@@ -151,7 +151,7 @@ You need fluency in three areas:
 The habit to build here: **never trust input**. Every `input()` call is a place where a user can hand you garbage, and your program's job is to notice and respond, not crash.
 
 ### Drills
-- [ ] Build a progress bar that prints on one line using `end="\r"`.
+- [Done] Build a progress bar that prints on one line using `end="\r"`.
 - [ ] Print a formatted table of 5 products and prices, with columns aligned using f-string padding.
 
 ### Exercises
