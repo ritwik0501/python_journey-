@@ -152,10 +152,10 @@ The habit to build here: **never trust input**. Every `input()` call is a place 
 
 ### Drills
 - [Done] Build a progress bar that prints on one line using `end="\r"`.
-- [ ] Print a formatted table of 5 products and prices, with columns aligned using f-string padding.
+- [Done] Print a formatted table of 5 products and prices, with columns aligned using f-string padding.
 
 ### Exercises
-- [ ] **Robust number reader:** keep asking for a number until the user supplies a valid one (use a loop and `.isdigit()` for now; you'll do it properly with `try/except` in 1.8).
+- [Done] **Robust number reader:** keep asking for a number until the user supplies a valid one (use a loop and `.isdigit()` for now; you'll do it properly with `try/except` in 1.8).
 - [ ] **Receipt generator:** ask for 3 items and prices, print a receipt with aligned columns, subtotal, 8% tax, and total.
 
 ### Mini-project
