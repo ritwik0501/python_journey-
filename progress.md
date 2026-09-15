@@ -156,7 +156,7 @@ The habit to build here: **never trust input**. Every `input()` call is a place 
 
 ### Exercises
 - [Done] **Robust number reader:** keep asking for a number until the user supplies a valid one (use a loop and `.isdigit()` for now; you'll do it properly with `try/except` in 1.8).
-- [ ] **Receipt generator:** ask for 3 items and prices, print a receipt with aligned columns, subtotal, 8% tax, and total.
+- [Done] **Receipt generator:** ask for 3 items and prices, print a receipt with aligned columns, subtotal, 8% tax, and total.
 
 ### Mini-project
 - [ ] **Interactive Quiz Game (120–180 lines):** 10 hardcoded questions, tracks score, shows a progress indicator ("Question 4 of 10"), gives immediate feedback, and prints a final grade with a percentage breakdown.

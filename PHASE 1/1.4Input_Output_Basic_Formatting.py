@@ -77,33 +77,117 @@
 # **Receipt generator:** ask for 3 items and prices,
 # print a receipt with aligned columns, subtotal, 8% tax, and total.
     
-items=[]
-price=[]
-subtotal=0
-for i in range(3):
-    print(f"Enter the name of the item{i+1}")
-    items.append(str(input()))
-    print(f"Enter the price of item {i+1}")
-    price.append(float(input()))
+# items=[]
+# price=[]
+# subtotal=0
+# for i in range(3):
+#     print(f"Enter the name of the item{i+1}")
+#     items.append(str(input()))
+#     print(f"Enter the price of item {i+1}")
+#     price.append(float(input()))
 
-for i in price:
-    subtotal =i+subtotal
+# for i in price:
+#     subtotal =i+subtotal
 
-subtotal_after_tax=(subtotal*(8/100))
+# subtotal_after_tax=(subtotal*(8/100))
 
-print("========================")
-print("         RECEIPT        ")
-print("=========================")
-print("Item                price")
+# print("========================")
+# print("         RECEIPT        ")
+# print("=========================")
+# print("Item                price")
 
-for i in range(3):
-    print(f"{items[i]:<10}{price[i]:>15}")
+# for i in range(3):
+#     print(f"{items[i]:<10}{price[i]:>15}")
     
-print("=========================")
-print(f"subtotal      {subtotal:>10}")
-print(f"after tax(8%) {subtotal_after_tax:10}")
-print("=========================")
-print(f"total         {subtotal+subtotal_after_tax:10}")
+# print("=========================")
+# print(f"subtotal      {subtotal:>10}")
+# print(f"after tax(8%) {subtotal_after_tax:10}")
+# print("=========================")
+# print(f"total         {subtotal+subtotal_after_tax:10}")
 
-   
+# **Interactive Quiz Game (120–180 lines):** 10 hardcoded questions, 
+# tracks score, shows a progress indicator ("Question 4 of 10"), 
+# gives immediate feedback, and prints a final grade with a percentage breakdown.
+
+questions = [
+    {
+        "question": "What is the output of len([10, 20, 30, 40])?",
+        "options": ["3", "4", "5", "Error"],
+        "answer": "4"
+    },
+
+    {
+        "question": "Which data structure follows the FIFO principle?",
+        "options": ["Stack", "Queue", "Tree", "Graph"],
+        "answer": "Queue"
+    },
+
+    {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["function", "define", "def", "func"],
+        "answer": "def"
+    },
+
+    {
+        "question": "What does CPU stand for?",
+        "options": [
+            "Central Processing Unit",
+            "Computer Processing Utility",
+            "Central Program Unit",
+            "Core Processing Utility"
+        ],
+        "answer": "Central Processing Unit"
+    },
+
+    {
+        "question": "Which of these is mutable in Python?",
+        "options": ["Tuple", "String", "List", "Integer"],
+        "answer": "List"
+    },
+
+    {
+        "question": "What is the average time complexity of binary search?",
+        "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+        "answer": "O(log n)"
+    },
+
+    {
+        "question": "What does == do in Python?",
+        "options": [
+            "Assigns a value",
+            "Compares two values",
+            "Checks the data type only",
+            "Creates a variable"
+        ],
+        "answer": "Compares two values"
+    },
+
+    {
+        "question": "Which SQL command is used to retrieve data?",
+        "options": ["GET", "FETCH", "SELECT", "READ"],
+        "answer": "SELECT"
+    },
+
+    {
+        "question": "Which OOP concept allows a child class to acquire properties from a parent class?",
+        "options": [
+            "Encapsulation",
+            "Abstraction",
+            "Inheritance",
+            "Polymorphism"
+        ],
+        "answer": "Inheritance"
+    },
+
+    {
+        "question": "What will 10 // 3 return in Python?",
+        "options": ["3.33", "3", "4", "1"],
+        "answer": "3"
+    }
+]
+j=0
+for i in questions:
+    print(f"Questions:{questions[j].question}")
+    j +=1
+    
 
