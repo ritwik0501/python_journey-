@@ -38,25 +38,41 @@
 
 # - Task 2 Print a formatted table of 5 products and prices, with columns aligned using f-string padding.
 # you have to put proper and normal value to look the table good 
-print("Enter 5 product name ")
-products=[]
-for i in range(5):
-    products.append(str(input()))
+# print("Enter 5 product name ")
+# products=[]
+# for i in range(5):
+#     products.append(str(input()))
 
-price=[]
-for j in range(5):
-    print(f"Enter the price of product {products[j]}")
-    price.append(str(input()))
+# price=[]
+# for j in range(5):
+#     print(f"Enter the price of product {products[j]}")
+#     price.append(str(input()))
     
-# Table header
-print("+----------------------+------------+")
-print(f"| {'Product':<20} | {'Price':>10} |")
-print("+----------------------+------------+")
+# # Table header
+# print("+----------------------+------------+")
+# print(f"| {'Product':<20} | {'Price':>10} |")
+# print("+----------------------+------------+")
 
-# Table rows
-for j in range(5):
-    print(f"| {products[j]:<20} | {price[j]:>10} |")
+# # Table rows
+# for j in range(5):
+#     print(f"| {products[j]:<20} | {price[j]:>10} |")
 
-print("+----------------------+------------+")
+# print("+----------------------+------------+")
 
+### Exercises
+# **Robust number reader:** 
+# keep asking for a number until the user supplies a valid one 
+# (use a loop and `.isdigit()` for now; 
+# you'll do it properly with `try/except` in 1.8).
+ 
+while(1):
+    print('Enter valid number')
+    num=input()
+    if(num.isdigit()):
+        exit()
+
+# suggestion:- u can use break instade of exit() ..exit will end whole programme fourcefully 
+# but break will only break the loop 
     
+    
+ 
