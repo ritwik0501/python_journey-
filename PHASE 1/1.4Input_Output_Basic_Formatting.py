@@ -65,14 +65,45 @@
 # (use a loop and `.isdigit()` for now; 
 # you'll do it properly with `try/except` in 1.8).
  
-while(1):
-    print('Enter valid number')
-    num=input()
-    if(num.isdigit()):
-        exit()
+# while(1):
+#     print('Enter valid number')
+#     num=input()
+#     if(num.isdigit()):
+#         exit()
 
 # suggestion:- u can use break instade of exit() ..exit will end whole programme fourcefully 
 # but break will only break the loop 
+
+# **Receipt generator:** ask for 3 items and prices,
+# print a receipt with aligned columns, subtotal, 8% tax, and total.
     
+items=[]
+price=[]
+subtotal=0
+for i in range(3):
+    print(f"Enter the name of the item{i+1}")
+    items.append(str(input()))
+    print(f"Enter the price of item {i+1}")
+    price.append(float(input()))
+
+for i in price:
+    subtotal =i+subtotal
+
+subtotal_after_tax=(subtotal*(8/100))
+
+print("========================")
+print("         RECEIPT        ")
+print("=========================")
+print("Item                price")
+
+for i in range(3):
+    print(f"{items[i]:<10}{price[i]:>15}")
     
- 
+print("=========================")
+print(f"subtotal      {subtotal:>10}")
+print(f"after tax(8%) {subtotal_after_tax:10}")
+print("=========================")
+print(f"total         {subtotal+subtotal_after_tax:10}")
+
+   
+
