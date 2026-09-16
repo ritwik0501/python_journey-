@@ -74,6 +74,7 @@
 # suggestion:- u can use break instade of exit() ..exit will end whole programme fourcefully 
 # but break will only break the loop 
 
+
 # **Receipt generator:** ask for 3 items and prices,
 # print a receipt with aligned columns, subtotal, 8% tax, and total.
     
@@ -185,9 +186,44 @@ questions = [
         "answer": "3"
     }
 ]
-j=0
-for i in questions:
-    print(f"Questions:{questions[j].question}")
-    j +=1
+import time
+import os
+len_questions=len(questions)
+correct =0
+incorrect=0
+score=0
+for i in range(len_questions):
+    # print(f"Question {i+1} out of 10")
+    print(f"Question {i+1} out of 10\n-------------------\n{questions[i]["question"]}")
+    print("Options")
+    for j in questions[i]["options"]:
+        print(f"->{j}")
+    print("Enter your anser here")
+    ans=input()
+    if(ans ==questions[i]["answer"]):
+        correct += 1
+        print("Answer is right✅")
+    else:
+        incorrect += 1
+        print("Answer is wrong ❌")
+        print("correct answer is ", questions[i]["answer"])
+    print(f"Score : {correct}/{i+1}")
+    input("Press Enter to continue...")
+    os.system("cls")
+
+print("=======================")
+print("     QUIZ RESULT        ")       
+print("========================")
+print(f"correct Answers: {correct}")
+print(f"Incorrect Answer: {incorrect}")
+print(f"Score:{correct}/10")
+print(f"Percentage: {(correct/10)*100}")
+
+print("===========================")
     
+    
+
+    
+    
+
 
