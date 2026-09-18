@@ -40,18 +40,51 @@
 #                     └── YES → Allow  
 
 
-user_loggin=True
-user_verified=True
-user_have_permission=True
+# user_loggin=True
+# user_verified=True
+# user_have_permission=True
 
-if(user_loggin):
-    if(user_verified):
-        if(user_have_permission):
-            print("User have permission")
-        else:
-            print("user restricted")
-    else:
-        print("User is only verified")
+# if(user_loggin):
+#     if(user_verified):
+#         if(user_have_permission):
+#             print("User have permission")
+#         else:
+#             print("user restricted")
+#     else:
+#         print("User is only verified")
+# else:
+#     print("User is only logged in ")
+
+
+# - [ ] **Rock-paper-scissors:** one round versus a random computer choice (`import random`), 
+# declaring winner or tie.
+import random
+print("Enter your choice: rock, paper, or scissors")
+print("Enter 'exit' to quit the game")
+user_choice=input().lower()
+computer_choice= random.choice(['rock', 'paper', 'scissors'])
+if user_choice=="exit":
+    exit()
+elif user_choice=="rock" and computer_choice=="scissors":
+    print("You win! Rock beats scissors.")
+elif user_choice=="rock" and computer_choice=="paper":
+    print("computer win! paper beats rock.")
+elif user_choice=="paper" and computer_choice=="scissors":
+    print("computer  win! scissors beats paper.") 
+elif user_choice=="paper" and computer_choice=="rock":
+    print("You win ! paper beats rock.")
+elif user_choice=="scissors" and computer_choice=="rock":
+    print("computer win! scissors beats rock.")
+elif user_choice=="scissors" and computer_choice=="paper":
+    print("You win! scissors beats paper.")
+elif user_choice=="scissors" and computer_choice=="scissors":
+    print("Draw! both chose scissors.")
+elif user_choice=="paper" and computer_choice=="paper":
+    print("Draw! both choose paper.")
+elif user_choice=="rock" and computer_choice=="rock":
+    print("Draw!both choose rock.")
+    
 else:
-    print("User is only logged in ")
-
+    print("Enter valid choice")
+ 
+                     
