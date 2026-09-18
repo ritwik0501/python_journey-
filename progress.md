@@ -180,8 +180,8 @@ The habit to build here: **never trust input**. Every `input()` call is a place 
 Also learn: nested conditionals (and when to flatten them with early returns), the ternary expression `value = a if condition else b`, and `match/case` (Python 3.10+) for clean multi-branch dispatch.
 
 ### Drills
-- [ ] Write a grade calculator (A–F) and deliberately reverse the condition order to see the bug it causes.
-- [ ] Rewrite a 3-level nested `if` as a flat chain of guard clauses.
+- [Done] Write a grade calculator (A–F) and deliberately reverse the condition order to see the bug it causes.
+- [Done] Rewrite a 3-level nested `if` as a flat chain of guard clauses.
 
 ### Exercises
 - [ ] **Rock-paper-scissors:** one round versus a random computer choice (`import random`), declaring winner or tie.
