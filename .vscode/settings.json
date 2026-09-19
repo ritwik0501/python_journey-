@@ -1,0 +1,8 @@
+{
+    "chat.editor.preferCopilotHarness": false,
+    "C_Cpp.copilotHover": "disabled",
+    "github.copilot.chat.copilotDebugCommand.enabled": false,
+    "github.copilot.chat.tools.viewImage.enabled": false,
+    "github.copilot.inlineSuggest.enable": false
+
+}
