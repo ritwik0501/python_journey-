@@ -185,7 +185,7 @@ Also learn: nested conditionals (and when to flatten them with early returns), t
 
 ### Exercises
 - [Done] **Rock-paper-scissors:** one round versus a random computer choice (`import random`), declaring winner or tie.
-- [ ] **BMI categoriser:** compute BMI from height and weight, classify it, and refuse impossible values (negative, zero, absurdly large).
+- [Done] **BMI categoriser:** compute BMI from height and weight, classify it, and refuse impossible values (negative, zero, absurdly large).
 - [ ] **Triangle classifier:** given three side lengths, determine whether they form a valid triangle, and if so whether it's equilateral, isosceles, or scalene.
 
 ### Mini-project

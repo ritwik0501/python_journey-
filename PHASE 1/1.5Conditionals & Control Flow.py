@@ -90,48 +90,69 @@
 #   [ ] **BMI categoriser:** compute BMI from height and weight, 
 #   classify it, and refuse impossible values (negative, zero, absurdly large).
 
-print("================")   
-print("BMI categoriser")
-print("================")
+# print("================")   
+# print("BMI categoriser")
+# print("================")
 
-while True:
-    try:
-        print("Enter weights in kg")
-        weights=float(input())
-        if weights==0 :
-            raise ZeroDivisionError
-        elif weights>=631 or weights<=3.3:
-            raise ValueError
-        break
-    except ValueError:
-        print("🔴Enter valied weight")
-    except ZeroDivisionError:
-        print("🔴Do not enter zero")
+# while True:
+#     try:
+#         print("Enter weights in kg")
+#         weights=float(input())
+#         if weights==0 :
+#             raise ZeroDivisionError
+#         elif weights>=631 or weights<=3.3:
+#             raise ValueError
+#         break
+#     except ValueError:
+#         print("🔴Enter valied weight")
+#     except ZeroDivisionError:
+#         print("🔴Do not enter zero")
         
 
-while True:
-    try:
-        print("Enter height in meter")
-        height=float(input())
-        if height==0:
-            raise ZeroDivisionError
-        elif height<0.49 or height<0:
-            raise ValueError
-        break
-    except ValueError:
-        print("🔴Enter valied height")
-    except ZeroDivisionError:
-        print("🔴Do not enter zero")
+# while True:
+#     try:
+#         print("Enter height in meter")
+#         height=float(input())
+#         if height==0:
+#             raise ZeroDivisionError
+#         elif height<0.49 or height<0:
+#             raise ValueError
+#         break
+#     except ValueError:
+#         print("🔴Enter valied height")
+#     except ZeroDivisionError:
+#         print("🔴Do not enter zero")
 
 
-bmi=weights/(height*height)
-if bmi>=30.0:
-    print("Obesity")
-elif 25.0<=bmi<=29.9:
-    print("Overweight")
-elif 18.5<=bmi<=24.9:
-    print("Healthy weight")
-elif bmi<=18.5:
-    print("UnderWeight")
+# bmi=weights/(height*height)
+# if bmi>=30.0:
+#     print("Obesity")
+# elif 25.0<=bmi<=29.9:
+#     print("Overweight")
+# elif 18.5<=bmi<=24.9:
+#     print("Healthy weight")
+# elif bmi<=18.5:
+#     print("UnderWeight")
 
+#  [ ] **Triangle classifier:** given three side lengths, 
+#  determine whether they form a valid triangle, and if so whether it's equilateral, isosceles, or scalene.
 
+print("Enter first sides of triangle ")
+side1=float(input()) 
+print("Enter second sides of triangle ")
+side2=float(input())
+print("Enter third sides of triangle ")
+side3=float(input())
+if(side1 >0  and side2 >0 and side3 >0):
+    
+    if(side1+side2>side3 and side2+side3>side1 and side3+side1>side2):
+        if(side1==side2==side3):
+            print("It is equilateral triangle")
+        elif(side1==side2 or side2==side3 or side3==side1):
+            print("It is isosceles triangle")
+        else:
+            print("It is scalene triangle")
+    else:
+        print("It is not possible to create triangle")       
+else:
+    print("Enter valid input of side ")
