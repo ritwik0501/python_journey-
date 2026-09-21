@@ -44,9 +44,21 @@
  
 # - [ ] Sum every number from 1 to 100 divisible by 3 or 5.
 
-sum=0
-for i in range(1,101):
-    if i%3==0 or i%5==0:
-        sum=sum+i
+# sum=0
+# for i in range(1,101):
+#     if i%3==0 or i%5==0:
+#         sum=sum+i
         
-print("Sum of every number from 1 to 100 divisible by 3 or 5",sum)
+# print("Sum of every number from 1 to 100 divisible by 3 or 5",sum)
+
+
+# - [ ] Use `enumerate` to print a numbered list, and `zip` to pair names with scores.
+
+lists=["a","b","c","d","e","f"]
+for index,item in enumerate(lists):
+    print(index,item)
+
+list2=["A","B","C","D","E","F"]
+
+for item1,item2 in zip(lists,list2):
+    print(item1,item2)
