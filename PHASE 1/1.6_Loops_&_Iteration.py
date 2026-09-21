@@ -67,12 +67,45 @@
 # - [ ] **FizzBuzz:** the classic 1–100 interview screen. Then do it in one line with a comprehension.
 
 
-for i in range(1,101):
-    if i%3==0 and i%5==0:
-        print("FizzBuzz")
-    elif i%3==0:
-        print("Fizz")
-    elif i%5==0:
-        print("Buzz")
-    else:
-        print(i)
+# for i in range(1,101):
+#     if i%3==0 and i%5==0:
+#         print("FizzBuzz")
+#     elif i%3==0:
+#         print("Fizz")
+#     elif i%5==0:
+#         print("Buzz")
+#     else:
+#         print(i)
+
+
+# - [ ] **Multiplication table:** print a formatted, aligned 12×12 grid with header row and column.
+
+
+# for i in range(1, 13):
+
+#     print(i, end="\t")
+
+#     for j in range(1, 13):
+#         print(i * j, end="\t")
+
+#     print()
+
+print("     ", end="")
+
+for j in range(1, 13):
+    print(f"{j:4}", end="")
+
+print()
+print("-" * 55)
+
+for i in range(1, 13):
+    print(f"{i:2} |", end="")
+
+    for j in range(1, 13):
+        print(f"{i * j:4}", end="")
+
+    print()
+    
+    
+
+    
