@@ -137,22 +137,64 @@
 #  [ ] **Triangle classifier:** given three side lengths, 
 #  determine whether they form a valid triangle, and if so whether it's equilateral, isosceles, or scalene.
 
-print("Enter first sides of triangle ")
-side1=float(input()) 
-print("Enter second sides of triangle ")
-side2=float(input())
-print("Enter third sides of triangle ")
-side3=float(input())
-if(side1 >0  and side2 >0 and side3 >0):
+# print("Enter first sides of triangle ")
+# side1=float(input()) 
+# print("Enter second sides of triangle ")
+# side2=float(input())
+# print("Enter third sides of triangle ")
+# side3=float(input())
+# if(side1 >0  and side2 >0 and side3 >0):
     
-    if(side1+side2>side3 and side2+side3>side1 and side3+side1>side2):
-        if(side1==side2==side3):
-            print("It is equilateral triangle")
-        elif(side1==side2 or side2==side3 or side3==side1):
-            print("It is isosceles triangle")
-        else:
-            print("It is scalene triangle")
-    else:
-        print("It is not possible to create triangle")       
-else:
-    print("Enter valid input of side ")
+#     if(side1+side2>side3 and side2+side3>side1 and side3+side1>side2):
+#         if(side1==side2==side3):
+#             print("It is equilateral triangle")
+#         elif(side1==side2 or side2==side3 or side3==side1):
+#             print("It is isosceles triangle")
+#         else:
+#             print("It is scalene triangle")
+#     else:
+#         print("It is not possible to create triangle")       
+# else:
+#     print("Enter valid input of side ")
+
+
+# **Choose-Your-Own-Adventure Game (200–300 lines):** at least 8 decision points, 
+# 3 distinct endings, an inventory the player collects, and validated input at every prompt. 
+# This will get ugly with nesting — that's the lesson. Notice the pain, remember it for 1.6.
+
+import os
+import time
+print("=========================================================")
+
+print("         🎮 Game: The Lost Temple of Aranya              ")
+
+print("==========================================================")
+
+
+print("\nYou are an explorer 🚵‍♂️ who receives an old map pointing to a forgotten temple deep inside a forest.")
+input("\n \npress enter to go next ....")
+os.system("cls")
+print("\nLegend says the temple🛕 contains the Sunstone, an ancient artifact worth a fortune.\n But the temple🛕 has been abandoned for hundreds of years.")
+input("\n \npress enter to go next chapter ....")
+os.system("cls")
+
+text="TASK: Enter the temple🛕, survive the traps ⚠️, collect useful items 🔑, and find the Sunstone ☀️."
+for letters in text:
+    print(letters,end="",flush=True)
+    time.sleep(0.1)
+input("\n\n press enter to start...")
+
+os.system("cls")
+
+for i in range(101):
+    bar= "#" * (i//5)
+    spaces=" "*(20-len(bar)) 
+    print(f"Loading...{bar}{spaces}",end="\r")
+    time.sleep(0.01)
+print("=========================================================")
+
+print("                       🌲The forest                       ")
+
+print("==========================================================")
+
+print("\nYou reach the entrance of the forest.")

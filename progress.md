@@ -186,7 +186,7 @@ Also learn: nested conditionals (and when to flatten them with early returns), t
 ### Exercises
 - [Done] **Rock-paper-scissors:** one round versus a random computer choice (`import random`), declaring winner or tie.
 - [Done] **BMI categoriser:** compute BMI from height and weight, classify it, and refuse impossible values (negative, zero, absurdly large).
-- [ ] **Triangle classifier:** given three side lengths, determine whether they form a valid triangle, and if so whether it's equilateral, isosceles, or scalene.
+- [Done] **Triangle classifier:** given three side lengths, determine whether they form a valid triangle, and if so whether it's equilateral, isosceles, or scalene.
 
 ### Mini-project
 - [ ] **Choose-Your-Own-Adventure Game (200–300 lines):** at least 8 decision points, 3 distinct endings, an inventory the player collects, and validated input at every prompt. This will get ugly with nesting — that's the lesson. Notice the pain, remember it for 1.6.
