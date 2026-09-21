@@ -54,11 +54,25 @@
 
 # - [ ] Use `enumerate` to print a numbered list, and `zip` to pair names with scores.
 
-lists=["a","b","c","d","e","f"]
-for index,item in enumerate(lists):
-    print(index,item)
+# lists=["a","b","c","d","e","f"]
+# for index,item in enumerate(lists):
+#     print(index,item)
 
-list2=["A","B","C","D","E","F"]
+# list2=["A","B","C","D","E","F"]
 
-for item1,item2 in zip(lists,list2):
-    print(item1,item2)
+# for item1,item2 in zip(lists,list2):
+#     print(item1,item2)
+
+
+# - [ ] **FizzBuzz:** the classic 1–100 interview screen. Then do it in one line with a comprehension.
+
+
+for i in range(1,101):
+    if i%3==0 and i%5==0:
+        print("FizzBuzz")
+    elif i%3==0:
+        print("Fizz")
+    elif i%5==0:
+        print("Buzz")
+    else:
+        print(i)

@@ -214,9 +214,9 @@ Master these tools:
 **Infinite loops** are a rite of passage. When one happens, `Ctrl+C` stops it, then ask: what was supposed to change the condition, and why didn't it?
 
 ### Drills
-- [ ] Print a right triangle, then a pyramid, then a diamond of asterisks using nested loops.
-- [ ] Sum every number from 1 to 100 divisible by 3 or 5.
-- [ ] Use `enumerate` to print a numbered list, and `zip` to pair names with scores.
+- [Done] Print a right triangle, then a pyramid, then a diamond of asterisks using nested loops.
+- [Done] Sum every number from 1 to 100 divisible by 3 or 5.
+- [Done] Use `enumerate` to print a numbered list, and `zip` to pair names with scores.
 
 ### Exercises
 - [ ] **FizzBuzz:** the classic 1–100 interview screen. Then do it in one line with a comprehension.
