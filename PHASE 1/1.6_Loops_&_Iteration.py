@@ -160,12 +160,42 @@
 # ptimise the inner loop to stop at `√n` 
 # # and explain why that's valid.
 
-for i in range(2,101):
-    is_prime=True
-    for j in range(2,int(i**0.5)+1):
-        # print(f"J, {j}, {i}")
-        if i%j==0:
-            is_prime=False
-            break
-    if is_prime:
-        print(i)
+# for i in range(2,101):
+#     is_prime=True
+#     for j in range(2,int(i**0.5)+1):
+#         # print(f"J, {j}, {i}")
+#         if i%j==0:
+#             is_prime=False
+#             break
+#     if is_prime:
+#         print(i)
+
+
+
+# [ ] **ATM Simulator (200–250 lines):** menu loop with balance check, 
+# deposit, withdraw, and transaction history. 
+# Enforce PIN entry with 3 attempts, prevent overdrafts, 
+# validate all amounts, 
+# and exit cleanly. Use only what you've learned so far.
+
+while True:
+    print("==========")
+    print("    Menu  ")
+    print("==========")
+    print("1.Check your balance")
+    print("2.Add Balance")
+    print("3.Withdraw Balance")
+    print("4.Transaction History")
+    print("5.Chnage your pin")
+    print("6.Exit")
+    print('Enter your choice')
+    choice=int(input())
+    balance=0
+    pin=1234
+
+    # match choice:
+    #     case 1:
+
+        
+    
+    
