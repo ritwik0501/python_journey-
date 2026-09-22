@@ -110,39 +110,62 @@
 # - [ ] **Number guessing game:** computer picks 1–100, gives higher/lower hints, limits attempts,
 # and offers a replay loop.
 
-import random
+# import random
 
-random_num=random.randint(1,100)
-# print(random_num)
-guess=0
-attempt=7
-check=True
-while True:
-    print(random_num)
-    print(f"Attempt left{attempt}/7")
-    if attempt==0:
-        print("You have exusated all the attempts,,,wanna reply(YES/NO) ?")
-        take_decesion=str(input())
-        if take_decesion.lower()=="yes":
-            random_num=random.randint(1,100)
-            attempt=7
-            continue
-        elif take_decesion.lower()=="no":
-            break
-        else:
-            print("rong input...terminatig")
-            break
+# random_num=random.randint(1,100)
+# # print(random_num)
+# guess=0
+# attempt=7
+# check=True
+# while True:
+#     print(random_num)
+#     print(f"Attempt left{attempt}/7")
+#     if attempt==0:
+#         print("You have exusated all the attempts,,,wanna reply(YES/NO) ?")
+#         take_decesion=str(input())
+#         if take_decesion.lower()=="yes":
+#             random_num=random.randint(1,100)
+#             attempt=7
+#             continue
+#         elif take_decesion.lower()=="no":
+#             break
+#         else:
+#             print("rong input...terminatig")
+#             break
     
-    print("Guess the number from 1 to 100!")
-    guess=int(input())
-    if random_num==guess:
-        print("Yahooo!got the num")
-        break
-    elif guess>random_num:
-        print("lower")
-        attempt -= 1
-    else:
-        print("Go upper")
-        attempt -= 1
+#     print("Guess the number from 1 to 100!")
+#     guess=int(input())
+#     if random_num==guess:
+#         print("Yahooo!got the num")
+#         break
+#     elif guess>random_num:
+#         print("lower")
+#         attempt -= 1
+#     else:
+#         print("Go upper")
+#         attempt -= 1
 
-    
+#  print all primes below 100, then optimise the inner loop to stop at `√n` 
+# and explain why that's valid.
+
+# for i in range(2,101):
+#     is_prime=True
+#     for j in range(2,i):
+#         if i%j==0:
+#             is_prime=False
+#             break
+#     if is_prime:
+#         print(i)
+
+# ptimise the inner loop to stop at `√n` 
+# # and explain why that's valid.
+
+for i in range(2,101):
+    is_prime=True
+    for j in range(2,int(i**0.5)+1):
+        # print(f"J, {j}, {i}")
+        if i%j==0:
+            is_prime=False
+            break
+    if is_prime:
+        print(i)
