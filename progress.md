@@ -220,7 +220,7 @@ Master these tools:
 
 ### Exercises
 - [Done] **FizzBuzz:** the classic 1–100 interview screen. Then do it in one line with a comprehension.
-- [ ] **Multiplication table:** print a formatted, aligned 12×12 grid with header row and column.
+- [Done] **Multiplication table:** print a formatted, aligned 12×12 grid with header row and column.
 - [ ] **Number guessing game:** computer picks 1–100, gives higher/lower hints, limits attempts, and offers a replay loop.
 - [ ] **Prime finder:** print all primes below 100, then optimise the inner loop to stop at `√n` and explain why that's valid.
 
