@@ -177,7 +177,9 @@
 # Enforce PIN entry with 3 attempts, prevent overdrafts, 
 # validate all amounts, 
 # and exit cleanly. Use only what you've learned so far.
-
+balance=100
+pin=1234
+transaction=[]
 while True:
     print("==========")
     print("    Menu  ")
@@ -190,12 +192,90 @@ while True:
     print("6.Exit")
     print('Enter your choice')
     choice=int(input())
-    balance=0
-    pin=1234
+   
+    pin_attempts=3
 
-    # match choice:
-    #     case 1:
-
-        
-    
-    
+    match choice:
+        case 1:
+            # pin_attempts=3
+            while(pin_attempts>0):
+                print("Enter your PIN")
+                input_given=int(input())
+                # print(pin,input_given)
+                if pin==input_given:
+                    print("CORRECT PIN")
+                    print("Your account balance is :",balance)
+                    break
+                else:
+                    print(f"WRONG PIN! {pin_attempts-1} ATTEMPT LEFT!")
+                    pin_attempts -=1
+                    break
+            # print("3 ATTEMPT DONE ")
+            # break
+        case 2:
+            print("Enter how much money you want to add")
+            enter_balance=int(input())
+            if enter_balance>0:
+                balance+=enter_balance
+                print("Your money has been added to your bank account")
+                transaction.append({
+                    "type":"deposite",
+                    "amount":enter_balance
+                })
+                print("Your bank balance is ",balance)
+                
+            else:
+                print("Enter valid amount")
+                # break
+        case 3:
+            print("Enter amount to to withdraw balance")
+            balance_withdraw=int(input())
+            if balance_withdraw>0 and balance_withdraw<=balance:
+                while(pin_attempts>0):
+                    print("Enter your PIN")
+                    input_given=int(input())
+                    if input_given==pin:
+                        print("CORRECT PIN")
+                        print("You have successfully withdraw money",balance_withdraw)
+                        balance-= balance_withdraw
+                        transaction.append({
+                            "type":"Withdraw",
+                            "amount":balance_withdraw
+                        })
+                        print("Your account balance is :",balance)
+                        break
+                    else:
+                        print(f"WRONG PIN! {pin_attempts-1} ATTEMPT LEFT!")
+                        pin_attempts -=1
+                        break
+                # print("3 attempt done")
+            else:
+                print("Enter valid amount")
+        case 4:
+            while(pin_attempts>0):
+                print("Enter your PIN")
+                input_given=int(input())
+                            # print(pin,input_given)
+                if pin==input_given:
+                    print("CORRECT PIN")
+                    print("=======Transaction History========")
+                    loop=1
+                    for i in transaction:
+                        print(f"{loop} {i['type']} { i['amount']}")
+                        loop +=1
+                    break   
+                else:
+                    print(f"WRONG PIN! {pin_attempts-1} ATTEMPT LEFT!")
+                    pin_attempts -=1
+                    break
+        case 5:
+            print("Enter old pin")
+            oldpin=int(input())
+            if oldpin==pin:
+                print("Enter new pin")
+                pin=int(input())
+                print("Your pin is successfully updated")
+            else:
+                print("Enter right pin!Try again")
+        case 6:
+            exit()
