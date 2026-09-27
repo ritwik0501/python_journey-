@@ -225,7 +225,7 @@ Master these tools:
 - [Done] **Prime finder:** print all primes below 100, then optimise the inner loop to stop at `√n` and explain why that's valid.
 
 ### Mini-project
-- [ ] **ATM Simulator (200–250 lines):** menu loop with balance check, deposit, withdraw, and transaction history. Enforce PIN entry with 3 attempts, prevent overdrafts, validate all amounts, and exit cleanly. Use only what you've learned so far.
+- [Done] **ATM Simulator (200–250 lines):** menu loop with balance check, deposit, withdraw, and transaction history. Enforce PIN entry with 3 attempts, prevent overdrafts, validate all amounts, and exit cleanly. Use only what you've learned so far.
 
 ### Resources
 - [Python Docs — for Statements](https://docs.python.org/3/tutorial/controlflow.html#for-statements)
