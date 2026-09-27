@@ -251,9 +251,9 @@ What you must actually understand, not just use:
 **The refactoring habit:** go back to your Calculator (1.2) and ATM (1.6) and rewrite them with functions. Feeling how much better they become is the entire point of this topic.
 
 ### Drills
-- [ ] Write `is_even(n)` that returns a bool, then a version that prints — and demonstrate why the printing one can't be composed.
-- [ ] Write a function with two required, one default, and `*args` parameters. Call it five different ways.
-- [ ] Demonstrate the mutable-default bug, then fix it.
+- [Done] Write `is_even(n)` that returns a bool, then a version that prints — and demonstrate why the printing one can't be composed.
+- [DOne] Write a function with two required, one default, and `*args` parameters. Call it five different ways.
+- [Done] Demonstrate the mutable-default bug, then fix it.
 
 ### Exercises
 - [ ] **Function library:** write and test `celsius_to_f`, `is_prime`, `reverse_string`, `count_vowels`, `factorial` (iterative), and `fibonacci(n)`.
