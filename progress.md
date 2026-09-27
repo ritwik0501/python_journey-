@@ -256,7 +256,7 @@ What you must actually understand, not just use:
 - [Done] Demonstrate the mutable-default bug, then fix it.
 
 ### Exercises
-- [ ] **Function library:** write and test `celsius_to_f`, `is_prime`, `reverse_string`, `count_vowels`, `factorial` (iterative), and `fibonacci(n)`.
+- [Done] **Function library:** write and test `celsius_to_f`, `is_prime`, `reverse_string`, `count_vowels`, `factorial` (iterative), and `fibonacci(n)`.
 - [ ] **Refactor:** rewrite your 1.5 adventure game so each scene is a function. Note the reduction in nesting.
 - [ ] **Calculator v2:** each operation is a function; a dictionary maps operator symbols to functions. (First taste of functions as values.)
 

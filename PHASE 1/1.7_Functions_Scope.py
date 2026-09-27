@@ -88,57 +88,127 @@ default_bug_fix("jodu",gretting="Ki re")
 ## this is wrong 🔴
 
 #right way 
-def add_name(name, names=[]):
-    names.append(name)
-    return names
+# def add_name(name, names=[]):
+#     names.append(name)
+#     return names
 
-print(add_name("Rik"))
-print(add_name("Raktim"))
-print(add_name("Surya"))
+# print(add_name("Rik"))
+# print(add_name("Raktim"))
+# print(add_name("Surya"))
 
-#in o/p I will get names at once ...
-# to fix that , I have to do like this 
+# #in o/p I will get names at once ...
+# # to fix that , I have to do like this 
 
-def add_name(name):
-    names=[]
-    names.append(name)
-    return names
+# def add_name(name):
+#     names=[]
+#     names.append(name)
+#     return names
 
-print(add_name("Rik"))
-print(add_name("Raktim"))
-print(add_name("Surya"))
+# print(add_name("Rik"))
+# print(add_name("Raktim"))
+# print(add_name("Surya"))
 
-## also u can do a better waay 
+# ## also u can do a better waay 
 
-#right way 
-def add_name(name, names=[]):
-    names.append(name)
-    return names
+# #right way 
+# def add_name(name, names=[]):
+#     names.append(name)
+#     return names
 
-print(add_name("Rik"))
-print(add_name("Raktim"))
-print(add_name("Surya"))
+# print(add_name("Rik"))
+# print(add_name("Raktim"))
+# print(add_name("Surya"))
 
-#in o/p I will get names at once ...
-# to fix that , I have to do like this 
+# #in o/p I will get names at once ...
+# # to fix that , I have to do like this 
 
-def add_name(name,names=None):
-    if names==None:
-        names=[]
-    names.append(name)
-    return names
+# def add_name(name,names=None):
+#     if names==None:
+#         names=[]
+#     names.append(name)
+#     return names
 
-print(add_name("Rik"))
-print(add_name("Raktim"))
-print(add_name("Surya"))
-
-
+# print(add_name("Rik"))
+# print(add_name("Raktim"))
+# print(add_name("Surya"))
 
 
+# **Function library:** write and test `celsius_to_f`, `is_prime`, 
+# `reverse_string`, `count_vowels`, `factorial` (iterative), and `fibonacci(n)`.
+
+def celsius_to_f(n):
+    return (n*1.8)+32
+
+def is_prime(n):
+    flag =True
+    for i in range(n):
+        if n%i==0:
+            flag=False
+    
+    if(flag):
+        return True
+    else:
+        return False
+    
+def reverse_string(strring):
+    return strring[::-1]
+
+
+def count_vowels(sentence):
+    vowel_list=['A','E','I','O','U','a','e','i','o','u']
+    count=0
+    for i in sentence:
+        if i in vowel_list:
+            count += 1
+        else:
+            continue
+        
+    return count
+             
 
 
 
+def factorial(num):
+    facto=1
+    for i in range(1,num+1):
+        facto *= i
+    
+    return facto
 
+# print(factorial(5))
 
+#0,1,1,2,3,5,8
+# def fibonacci(n):
+#     start=0
+#     second=1
+#     sum=0
+#     print(0)
+#     for i in range(n-1):
+#         sum =start+second
+#         print(sum)
+#         temp=start
+#         start=sum  
+#         second=temp
+    
+#     return sum 
 
+#this things work done but a smaller better approach 
+
+def fibonacci(n):
+    start = 0
+    second = 1
+
+    print(start)
+
+    for i in range(n - 1):
+        total = start + second
+        print(total)
+
+        start = second
+        second = total
+
+    return total
+
+fibonacci(10)
+    
 
