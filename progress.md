@@ -258,7 +258,7 @@ What you must actually understand, not just use:
 ### Exercises
 - [Done] **Function library:** write and test `celsius_to_f`, `is_prime`, `reverse_string`, `count_vowels`, `factorial` (iterative), and `fibonacci(n)`.
 - [Done] **Refactor:** rewrite your 1.5 adventure game so each scene is a function. Note the reduction in nesting.
-- [ ] **Calculator v2:** each operation is a function; a dictionary maps operator symbols to functions. (First taste of functions as values.)
+- [Done] **Calculator v2:** each operation is a function; a dictionary maps operator symbols to functions. (First taste of functions as values.)
 
 ### Mini-project
 - [ ] **Command-Line To-Do Manager (250–300 lines):** add, list, complete, delete, and filter tasks. Every operation is its own well-named function under 20 lines. Data lives in a list in memory (persistence arrives in Phase 3). Include a `main()` function and the `if __name__ == "__main__":` guard.

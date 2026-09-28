@@ -221,52 +221,267 @@ fibonacci(10)
 # (First taste of functions as values.)
 
 
-def addition(*oeprator):
-    total=0
-    for i in oeprator:
-        total += i
+# def addition(*oeprator):
+#     total=0
+#     for i in oeprator:
+#         total += i
 
-    return total
+#     return total
 
-# print(addition(2,4))
-#10,5,3,
+# # print(addition(2,4))
+# #10,5,3,
 
-def subtraction(*oprator):
-    total=oprator[0]
-    for i in range(1,len(oprator)):
-        total -= oprator[i]
-    return total
+# def subtraction(*oprator):
+#     total=oprator[0]
+#     for i in range(1,len(oprator)):
+#         total -= oprator[i]
+#     return total
 
-def multiplication(*oeprator):
-    total=1
-    for i in oeprator:
-        total *= i
-    return total
+# def multiplication(*oeprator):
+#     total=1
+#     for i in oeprator:
+#         total *= i
+#     return total
 
-def division(*oeprator1):
-    return oeprator1[0]/oeprator1[1]
+# def division(*oeprator1):
+#     return oeprator1[0]/oeprator1[1]
 
-def calculate(*inputs):
-    return True 
+# def calculate(*inputs):
+#     return True 
 
-calculator_v2={
-    "+":addition,
-    "-":subtraction,
-    "*":multiplication,
-    "/":division,
-    "=":calculate
-}
-values=[]
-print('Enter how many values u want to enter ; for division only first 2 input will be valid')
-number_of_inpiut=int(input())
-print("Enter value one by one ")
-for i in range(number_of_inpiut):
-    values.append(float(input())) ## always remember if u do not specify the type it will automatically take string
-print('Enter the opearation')
-operation=input()
+# calculator_v2={
+#     "+":addition,
+#     "-":subtraction,
+#     "*":multiplication,
+#     "/":division,
+#     "=":calculate
+# }
+# values=[]
+# print('Enter how many values u want to enter ; for division only first 2 input will be valid')
+# number_of_inpiut=int(input())
+# print("Enter value one by one ")
+# for i in range(number_of_inpiut):
+#     values.append(float(input())) ## always remember if u do not specify the type it will automatically take string
+# print('Enter the opearation')
+# operation=input()
 
-if operation in calculator_v2:
-    result=calculator_v2[operation](*values)
-    print("Result:",result)
-else:
-    print("Invalid operator")
+# if operation in calculator_v2:
+#     result=calculator_v2[operation](*values)
+#     print("Result:",result)
+# else:
+#     print("Invalid operator")
+
+
+# **Command-Line To-Do Manager (250–300 lines):** 
+# add, list, complete, delete, and filter tasks. 
+# Every operation is its own well-named function under 20 lines.
+# Data lives in a list in memory (persistence arrives in Phase 3). 
+# Include a `main()` function and the `if __name__ == "__main__":` guard.
+if __name__=="__main__":
+    task=[]
+    task_status=[]
+    def add_task():
+        print("Enter name of the task")
+        task_name=str(input())
+        task.append(task_name)
+        task_status.append("pending")
+        return True
+
+    def list_task():
+        for i in range(len(task)):
+            print(f"{i+1} {task[i]}  {task_status[i]}")
+
+    def complete_task():
+        print("Enter task numeber to mark as completed ")
+        task_number=int(input())
+        task_status[task_number-1]="Completed"
+        print("Done ! completed")
+        return True
+    
+    def delete_task():
+        print("Enter task numeber to delete ")
+        task_number=int(input())
+        task.remove(task_number-1)
+        task_status.remove(task_number-1)
+        print("Done ! Deleted Successfully")
+        return True
+    def filter_task():
+        print("1.Show all task")
+        print("2.Show pending task")
+        print("3.Show completed task")
+        print("Enter your choice")
+        choose=int(input())
+        
+        if choose==1:
+            list_task()
+        elif choose==2:
+            number=1
+            for i in range(len(task)):
+                # number=1
+                if task_status[i]=="pending":
+                    print(f"{number}. {task[i]} {task_status[i]}")
+                    number += 1
+        elif choose==3:
+            number=1
+            for i in range(len(task)):
+                number=1
+                if task_status[i]=="Completed":
+                    print(f"{number}. {task[i]} {task_status[i]}")
+                    number += 1
+        else:
+            print("Enter valid input")
+            
+            
+add_task()
+add_task()
+add_task()
+add_task()
+list_task()
+complete_task()
+complete_task()
+list_task()
+filter_task()
+filter_task()
+filter_task()
+list_task()
+           
+    ## my work till here after that I have used Ai to built rest of the part 
+    
+    
+task = []
+task_status = []
+
+
+def add_task():
+    task_name = input("Enter name of the task: ")
+
+    task.append(task_name)
+    task_status.append("pending")
+
+    print("Task added successfully!")
+
+
+def list_task():
+    if len(task) == 0:
+        print("No tasks available.")
+        return
+
+    print("\n--- All Tasks ---")
+
+    for i in range(len(task)):
+        print(f"{i + 1}. {task[i]} - {task_status[i]}")
+
+
+def complete_task():
+    if len(task) == 0:
+        print("No tasks available.")
+        return
+
+    list_task()
+
+    task_number = int(input("Enter task number to mark as completed: "))
+
+    if task_number < 1 or task_number > len(task):
+        print("Invalid task number.")
+        return
+
+    task_status[task_number - 1] = "Completed"
+
+    print("Task completed successfully!")
+
+
+def delete_task():
+    if len(task) == 0:
+        print("No tasks available.")
+        return
+
+    list_task()
+
+    task_number = int(input("Enter task number to delete: "))
+
+    if task_number < 1 or task_number > len(task):
+        print("Invalid task number.")
+        return
+
+    task.pop(task_number - 1)
+    task_status.pop(task_number - 1)
+
+    print("Task deleted successfully!")
+
+
+def filter_task():
+    print("\n1. Show all tasks")
+    print("2. Show pending tasks")
+    print("3. Show completed tasks")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        list_task()
+
+    elif choice == 2:
+        print("\n--- Pending Tasks ---")
+
+        number = 1
+
+        for i in range(len(task)):
+            if task_status[i] == "pending":
+                print(f"{number}. {task[i]} - {task_status[i]}")
+                number += 1
+
+    elif choice == 3:
+        print("\n--- Completed Tasks ---")
+
+        number = 1
+
+        for i in range(len(task)):
+            if task_status[i] == "Completed":
+                print(f"{number}. {task[i]} - {task_status[i]}")
+                number += 1
+
+    else:
+        print("Invalid choice.")
+
+
+def main():
+
+    while True:
+
+        print("\n========== TO-DO MANAGER ==========")
+        print("1. Add Task")
+        print("2. List Tasks")
+        print("3. Complete Task")
+        print("4. Delete Task")
+        print("5. Filter Tasks")
+        print("6. Exit")
+        print("===================================")
+
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            add_task()
+
+        elif choice == 2:
+            list_task()
+
+        elif choice == 3:
+            complete_task()
+
+        elif choice == 4:
+            delete_task()
+
+        elif choice == 5:
+            filter_task()
+
+        elif choice == 6:
+            print("Exiting To-Do Manager. Goodbye!")
+            break
+
+        else:
+            print("Invalid choice. Please try again.")
+
+
+if __name__ == "__main__":
+    main()
+        
+# main()
