@@ -252,12 +252,12 @@ What you must actually understand, not just use:
 
 ### Drills
 - [Done] Write `is_even(n)` that returns a bool, then a version that prints — and demonstrate why the printing one can't be composed.
-- [DOne] Write a function with two required, one default, and `*args` parameters. Call it five different ways.
+- [Done] Write a function with two required, one default, and `*args` parameters. Call it five different ways.
 - [Done] Demonstrate the mutable-default bug, then fix it.
 
 ### Exercises
 - [Done] **Function library:** write and test `celsius_to_f`, `is_prime`, `reverse_string`, `count_vowels`, `factorial` (iterative), and `fibonacci(n)`.
-- [ ] **Refactor:** rewrite your 1.5 adventure game so each scene is a function. Note the reduction in nesting.
+- [Done] **Refactor:** rewrite your 1.5 adventure game so each scene is a function. Note the reduction in nesting.
 - [ ] **Calculator v2:** each operation is a function; a dictionary maps operator symbols to functions. (First taste of functions as values.)
 
 ### Mini-project

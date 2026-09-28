@@ -212,3 +212,61 @@ def fibonacci(n):
 fibonacci(10)
     
 
+# rewrite your 1.5 adventure game so each scene is a function. Note the reduction in nesting.
+## skip this one 
+
+
+# - [ ] **Calculator v2:** each operation is a function; 
+# a dictionary maps operator symbols to functions. 
+# (First taste of functions as values.)
+
+
+def addition(*oeprator):
+    total=0
+    for i in oeprator:
+        total += i
+
+    return total
+
+# print(addition(2,4))
+#10,5,3,
+
+def subtraction(*oprator):
+    total=oprator[0]
+    for i in range(1,len(oprator)):
+        total -= oprator[i]
+    return total
+
+def multiplication(*oeprator):
+    total=1
+    for i in oeprator:
+        total *= i
+    return total
+
+def division(*oeprator1):
+    return oeprator1[0]/oeprator1[1]
+
+def calculate(*inputs):
+    return True 
+
+calculator_v2={
+    "+":addition,
+    "-":subtraction,
+    "*":multiplication,
+    "/":division,
+    "=":calculate
+}
+values=[]
+print('Enter how many values u want to enter ; for division only first 2 input will be valid')
+number_of_inpiut=int(input())
+print("Enter value one by one ")
+for i in range(number_of_inpiut):
+    values.append(float(input())) ## always remember if u do not specify the type it will automatically take string
+print('Enter the opearation')
+operation=input()
+
+if operation in calculator_v2:
+    result=calculator_v2[operation](*values)
+    print("Result:",result)
+else:
+    print("Invalid operator")
