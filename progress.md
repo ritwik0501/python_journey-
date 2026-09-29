@@ -290,7 +290,7 @@ Also: `raise` to signal your own errors, and defining a custom exception class (
 
 ### Drills
 - [Done] Deliberately trigger each of the seven common exceptions listed above and read each traceback.
-- [ ] Write a `safe_divide(a, b)` that returns `None` instead of raising on division by zero.
+- [Done] Write a `safe_divide(a, b)` that returns `None` instead of raising on division by zero.
 - [ ] Show a case where `finally` runs even though the function returned early.
 
 ### Exercises
