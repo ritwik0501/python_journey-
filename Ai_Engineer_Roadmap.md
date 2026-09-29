@@ -52,7 +52,7 @@ CORE TRACKS  →  do all of these, in order (build first, deepen after)
      └── Track 7: Classical ML Engineering
      │
      ▼
-SPECIALISE  →  pick 1–2 tracks to go deep based on the job you want
+SPECIALISE  →  pick 1–2 tracks to go deep based on the job you want( For my case for now I will choose Track 3 and Track 4and track 5)
 ```
 
 Each track has:
