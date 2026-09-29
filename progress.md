@@ -261,7 +261,7 @@ What you must actually understand, not just use:
 - [Done] **Calculator v2:** each operation is a function; a dictionary maps operator symbols to functions. (First taste of functions as values.)
 
 ### Mini-project
-- [ ] **Command-Line To-Do Manager (250–300 lines):** add, list, complete, delete, and filter tasks. Every operation is its own well-named function under 20 lines. Data lives in a list in memory (persistence arrives in Phase 3). Include a `main()` function and the `if __name__ == "__main__":` guard.
+- [Done] **Command-Line To-Do Manager (250–300 lines):** add, list, complete, delete, and filter tasks. Every operation is its own well-named function under 20 lines. Data lives in a list in memory (persistence arrives in Phase 3). Include a `main()` function and the `if __name__ == "__main__":` guard.
 
 ### Resources
 - [Python Docs — Defining Functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
@@ -289,7 +289,7 @@ Then learn to **read a traceback**: it reads bottom-up in importance — the las
 Also: `raise` to signal your own errors, and defining a custom exception class (`class InsufficientFundsError(Exception): pass`) so callers can handle your failure modes specifically.
 
 ### Drills
-- [ ] Deliberately trigger each of the seven common exceptions listed above and read each traceback.
+- [Done] Deliberately trigger each of the seven common exceptions listed above and read each traceback.
 - [ ] Write a `safe_divide(a, b)` that returns `None` instead of raising on division by zero.
 - [ ] Show a case where `finally` runs even though the function returned early.
 
