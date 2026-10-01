@@ -291,7 +291,7 @@ Also: `raise` to signal your own errors, and defining a custom exception class (
 ### Drills
 - [Done] Deliberately trigger each of the seven common exceptions listed above and read each traceback.
 - [Done] Write a `safe_divide(a, b)` that returns `None` instead of raising on division by zero.
-- [ ] Show a case where `finally` runs even though the function returned early.
+- [Done] Show a case where `finally` runs even though the function returned early.
 
 ### Exercises
 - [ ] **Bulletproof input:** write `get_int(prompt, min_val, max_val)` that loops until it gets a valid integer in range, handling both `ValueError` and out-of-range separately.
