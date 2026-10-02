@@ -325,7 +325,7 @@ Understand `if __name__ == "__main__":` properly: when a file runs directly, `__
 **Standard library tour** (Python's "batteries included" — knowing what's there saves you writing it): `math`, `random`, `datetime`, `os`, `sys`, `json`, `csv`, `re`, `collections`, `itertools`, `pathlib`, `time`.
 
 ### Drills
-- [ ] Split your to-do manager into `tasks.py` (logic) and `main.py` (interface), importing across them.
+- [Done] Split your to-do manager into `tasks.py` (logic) and `main.py` (interface), importing across them.
 - [ ] Use `datetime` to calculate your exact age in days.
 - [ ] Use `random.sample`, `random.shuffle`, and `random.choices` and articulate the difference.
 
