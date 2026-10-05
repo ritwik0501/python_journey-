@@ -178,6 +178,8 @@
 # validate all amounts, 
 # and exit cleanly. Use only what you've learned so far.
 import time
+class InsufficientFundsError(Exception):
+    pass
 balance=100
 pin=1234
 transaction=[]
@@ -244,13 +246,16 @@ while True:
                     # break
             case 3:
                 try:
-
                     print("Enter amount to to withdraw balance")
                     balance_withdraw=int(input())
+                    if balance_withdraw <= 0 or balance_withdraw > balance:
+                        raise InsufficientFundsError("Insuffient balance or value can not go under 1")
                 except ValueError:
                     print("Enter valid amount to withdraw")
+                except InsufficientFundsError as e:
+                    print(e)
+                    
                 else:
-                    if balance_withdraw>0 and balance_withdraw<=balance:
                         while(pin_attempts>0):
                             print("Enter your PIN")
                             try:
@@ -276,8 +281,9 @@ while True:
                                     pin_attempts -=1
                                     continue
                             # print("3 attempt done")
-                    else:
-                        print("Enter valid amount")
+                        else:
+                            print("Enter valid amount")
+                        
             case 4:
                 
                     while(pin_attempts>0):
