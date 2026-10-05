@@ -177,6 +177,7 @@
 # Enforce PIN entry with 3 attempts, prevent overdrafts, 
 # validate all amounts, 
 # and exit cleanly. Use only what you've learned so far.
+import time
 balance=100
 pin=1234
 transaction=[]
@@ -228,6 +229,7 @@ while True:
                     enter_balance=int(input())
                 except ValueError:
                     print("Enter valid value to add money")
+                else:
                     if enter_balance>0:
                         balance+=enter_balance
                         print("Your money has been added to your bank account")
@@ -247,53 +249,66 @@ while True:
                     balance_withdraw=int(input())
                 except ValueError:
                     print("Enter valid amount to withdraw")
+                else:
                     if balance_withdraw>0 and balance_withdraw<=balance:
                         while(pin_attempts>0):
                             print("Enter your PIN")
-                            input_given=int(input())
-                            if input_given==pin:
-                                print("CORRECT PIN")
-                                print("You have successfully withdraw money",balance_withdraw)
-                                balance-= balance_withdraw
-                                transaction.append({
-                                    "type":"Withdraw",
-                                    "amount":balance_withdraw
-                                })
-                                print("Your account balance is :",balance)
-                                break
+                            try:
+                                input_given=int(input())
+                            except ValueError:
+                                    print(f"WRONG PIN! {pin_attempts-1} ATTEMPT LEFT!")
+                                    pin_attempts -=1
+                                    print("Enter valid input for pin please !")
+                                    continue
                             else:
-                                print(f"WRONG PIN! {pin_attempts-1} ATTEMPT LEFT!")
-                                pin_attempts -=1
-                                break
-                        # print("3 attempt done")
+                                if input_given==pin:
+                                    print("CORRECT PIN")
+                                    print("You have successfully withdraw money",balance_withdraw)
+                                    balance-= balance_withdraw
+                                    transaction.append({
+                                        "type":"Withdraw",
+                                        "amount":balance_withdraw
+                                    })
+                                    print("Your account balance is :",balance)
+                                    break
+                                else:
+                                    print(f"WRONG PIN! {pin_attempts-1} ATTEMPT LEFT!")
+                                    pin_attempts -=1
+                                    continue
+                            # print("3 attempt done")
                     else:
                         print("Enter valid amount")
             case 4:
-                try:
+                
                     while(pin_attempts>0):
-                        print("Enter your PIN")
-                        input_given=int(input())
-                except ValueError:
-                        print("Enter proper value")
-                                    # print(pin,input_given)
-                        if pin==input_given:
-                            print("CORRECT PIN")
-                            print("=======Transaction History========")
-                            loop=1
-                            for i in transaction:
-                                print(f"{loop} {i['type']} { i['amount']}")
-                                loop +=1
-                            break   
-                        else:
+                        try:
+                            print("Enter your PIN")
+                            input_given=int(input())
+                        except ValueError:
                             print(f"WRONG PIN! {pin_attempts-1} ATTEMPT LEFT!")
                             pin_attempts -=1
-                            break
+                            print("Enter proper value")
+                            continue
+                        else:                   # print(pin,input_given)
+                            if pin==input_given:
+                                print("CORRECT PIN")
+                                print("=======Transaction History========")
+                                loop=1
+                                for i in transaction:
+                                    print(f"{loop} {i['type']} { i['amount']}")
+                                    loop +=1
+                                break   
+                            else:
+                                print(f"WRONG PIN! {pin_attempts-1} ATTEMPT LEFT!")
+                                pin_attempts -=1
+                                continue
             case 5:
                 try:
                     print("Enter old pin")
                     oldpin=int(input())
                 except ValueError:
                     print("Enter pin in number ")
+                else:
                     if oldpin==pin:
                         print("Enter new pin")
                         pin=int(input())
@@ -301,4 +316,6 @@ while True:
                     else:
                         print("Enter right pin!Try again")
             case 6:
+                print("Exit....")
+                time.sleep(0.5)
                 exit()

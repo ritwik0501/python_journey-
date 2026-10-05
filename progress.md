@@ -295,7 +295,7 @@ Also: `raise` to signal your own errors, and defining a custom exception class (
 
 ### Exercises
 - [Done] **Bulletproof input:** write `get_int(prompt, min_val, max_val)` that loops until it gets a valid integer in range, handling both `ValueError` and out-of-range separately.
-- [ ] **Retrofit:** add proper exception handling to your ATM simulator and to-do manager. Every `int()` conversion should be guarded.
+- [Done] **Retrofit:** add proper exception handling to your ATM simulator and to-do manager. Every `int()` conversion should be guarded.
 - [ ] **Custom exception:** raise `InsufficientFundsError` with a useful message in a withdrawal function, and handle it at the call site.
 
 ### Mini-project
