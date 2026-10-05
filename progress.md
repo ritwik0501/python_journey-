@@ -296,10 +296,10 @@ Also: `raise` to signal your own errors, and defining a custom exception class (
 ### Exercises
 - [Done] **Bulletproof input:** write `get_int(prompt, min_val, max_val)` that loops until it gets a valid integer in range, handling both `ValueError` and out-of-range separately.
 - [Done] **Retrofit:** add proper exception handling to your ATM simulator and to-do manager. Every `int()` conversion should be guarded.
-- [ ] **Custom exception:** raise `InsufficientFundsError` with a useful message in a withdrawal function, and handle it at the call site.
+- [Done] **Custom exception:** raise `InsufficientFundsError` with a useful message in a withdrawal function, and handle it at the call site.
 
 ### Mini-project
-- [ ] **Robust Recipe Scaler (150–200 lines):** store recipes with ingredients and quantities, scale by servings, convert units, and survive *any* input a hostile user provides — negative servings, text where numbers go, unknown recipe names, empty input. Your program should never show a raw traceback.
+- [Skip] **Robust Recipe Scaler (150–200 lines):** store recipes with ingredients and quantities, scale by servings, convert units, and survive *any* input a hostile user provides — negative servings, text where numbers go, unknown recipe names, empty input. Your program should never show a raw traceback.
 
 ### Resources
 - [Python Docs — Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
@@ -326,7 +326,7 @@ Understand `if __name__ == "__main__":` properly: when a file runs directly, `__
 
 ### Drills
 - [Done] Split your to-do manager into `tasks.py` (logic) and `main.py` (interface), importing across them.
-- [ ] Use `datetime` to calculate your exact age in days.
+- [Done] Use `datetime` to calculate your exact age in days.
 - [ ] Use `random.sample`, `random.shuffle`, and `random.choices` and articulate the difference.
 
 ### Exercises
