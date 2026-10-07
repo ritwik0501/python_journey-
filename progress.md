@@ -327,7 +327,7 @@ Understand `if __name__ == "__main__":` properly: when a file runs directly, `__
 ### Drills
 - [Done] Split your to-do manager into `tasks.py` (logic) and `main.py` (interface), importing across them.
 - [Done] Use `datetime` to calculate your exact age in days.
-- [ ] Use `random.sample`, `random.shuffle`, and `random.choices` and articulate the difference.
+- [Done] Use `random.sample`, `random.shuffle`, and `random.choices` and articulate the difference.
 
 ### Exercises
 - [ ] **Password generator module:** a `passgen.py` with configurable length and character sets, plus a `__main__` block that demos it when run directly.
